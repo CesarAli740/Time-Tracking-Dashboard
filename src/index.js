@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './component/App';
+import { cardlist } from "./cardAPI/index";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+console.log(cardlist)
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render( <
+    React.StrictMode >
+    <
+    App list = { cardlist }
+    /> <
+    /React.StrictMode>
 );
